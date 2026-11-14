@@ -2,14 +2,14 @@
 
 **Статус:** `W0-11_PARTIAL` (не `W0-11_READY`)
 **Дата / исполнитель:** 13.11.2026 / AI-агент
-**Repository URL / visibility / plan:** `https://github.com/a40-sorokin/Russian_Lang` / **public** / GitHub Free
+**Repository URL / visibility / plan:** `https://github.com/soulful31/Russian_Lang` (организация `soulful31`; до 14.11.2026 — `a40-sorokin/Russian_Lang`) / **public** / GitHub Free
 **Initial main SHA:** `a64f1480a4608abb393118ee87768a71a814a8af`
 **Develop создан от:** `a64f148`
 **Bootstrap merge в develop:** `ac98bb15eadc8d2c58dedbfe442fcc8d9ed0d95d`
 **Feature tip W0-01/W0-11:** `a0476783cd5ccb9caaf9d9d814f5d00b05e1ed37`
 **Develop до финализационного PR:** `f3891e069d3a57bffbb0676352ece9335499d9df`
 **PR #2 merged:** `f0cc7e429d907990d047f767b83508efbdc3a362` (13.11.2026 19:32 UTC)
-**Финальный PR:** [#2](https://github.com/a40-sorokin/Russian_Lang/pull/2) (`feature/w0-11-finalize` → `develop`)
+**Финальный PR:** [#2](https://github.com/soulful31/Russian_Lang/pull/2) (`feature/w0-11-finalize` → `develop`)
 
 ## Фактическое состояние
 
@@ -26,20 +26,26 @@
   - обязательно разрешение обсуждений (conversation resolution).
 - Экспорт: `https://api.github.com/repos/a40-sorokin/Russian_Lang/branches/develop/protection` и `.../branches/main/protection`.
 - Независимый второй ревьюер отсутствует; фиктивное «AI approval» не создавалось.
+- **14.11.2026: перенос в организацию `soulful31`.** Ветки, PR #1–#3, history и защита обеих веток сохранены — проверено API после переноса:
+  - `required_status_checks` = `quality`, `e2e`, `postgres-integration`, `strict = true`;
+  - `required_approving_review_count = 0`, `enforce_admins = true`, force push и удаление запрещены, conversation resolution обязательна;
+  - раннеры: `Actions enabled`, `allowed_actions = all`, `sha_pinning_required = false` (SHA-пин выполняется в `ci.yml`, но не принудительно политикой репозитория).
+- Роли репозитория после переноса: `a40-sorokin` — `admin`; `a40-sorokin-uz` и `anton-true-grade` — `triage`/`moderate` (только чтение, **approve дать не смогут**). Требование review = 1 включить нельзя до появления ревьюера с доступом `maintain`/`write`.
+- Токен, выданный для организации, работает с `soulful31/Russian_Lang` (protection и collaborators читаются), но `a40-sorokin` не является членом организации: `user/memberships/orgs = []`. Рекомендуется добавить аккаунт в организацию как `Owner`.
 
 ## Фактические CI-прогоны
 
-| Назначение                                 | SHA       | Run                                                                                 | Результат                                            |
-| ------------------------------------------ | --------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| Push в `develop`                           | `f3891e0` | [43479293491](https://github.com/a40-sorokin/Russian_Lang/actions/runs/43479293491) | **success**: quality, e2e, postgres-integration      |
-| Негативный PR #1 (намеренно падающий тест) | `fe54c52` | [43490732014](https://github.com/a40-sorokin/Russian_Lang/actions/runs/43490732014) | **failure**: `quality` красный; e2e/postgres зелёные |
-| Тот же PR после удаления падающего теста   | `4ca8a05` | [43490957457](https://github.com/a40-sorokin/Russian_Lang/actions/runs/43490957457) | **success**: все три job                             |
-| Финальный PR #2, первый head               | `1031150` | [43491302651](https://github.com/a40-sorokin/Russian_Lang/actions/runs/43491302651) | **success**: все три job                             |
-| Финальный PR #2, head с ссылками           | `5ea4ebb` | [43491554379](https://github.com/a40-sorokin/Russian_Lang/actions/runs/43491554379) | **success**: все три job                             |
-| PR #2, head с protection                   | `cc8743a` | [43492922696](https://github.com/a40-sorokin/Russian_Lang/actions/runs/43492922696) | **success**: все три job                             |
-| Merge PR #2 в `develop`                    | `f0cc7e4` | [43493143798](https://github.com/a40-sorokin/Russian_Lang/actions/runs/43493143798) | **success**: quality, e2e, postgres-integration      |
+| Назначение                                 | SHA       | Run                                                                               | Результат                                            |
+| ------------------------------------------ | --------- | --------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| Push в `develop`                           | `f3891e0` | [43479293491](https://github.com/soulful31/Russian_Lang/actions/runs/43479293491) | **success**: quality, e2e, postgres-integration      |
+| Негативный PR #1 (намеренно падающий тест) | `fe54c52` | [43490732014](https://github.com/soulful31/Russian_Lang/actions/runs/43490732014) | **failure**: `quality` красный; e2e/postgres зелёные |
+| Тот же PR после удаления падающего теста   | `4ca8a05` | [43490957457](https://github.com/soulful31/Russian_Lang/actions/runs/43490957457) | **success**: все три job                             |
+| Финальный PR #2, первый head               | `1031150` | [43491302651](https://github.com/soulful31/Russian_Lang/actions/runs/43491302651) | **success**: все три job                             |
+| Финальный PR #2, head с ссылками           | `5ea4ebb` | [43491554379](https://github.com/soulful31/Russian_Lang/actions/runs/43491554379) | **success**: все три job                             |
+| PR #2, head с protection                   | `cc8743a` | [43492922696](https://github.com/soulful31/Russian_Lang/actions/runs/43492922696) | **success**: все три job                             |
+| Merge PR #2 в `develop`                    | `f0cc7e4` | [43493143798](https://github.com/soulful31/Russian_Lang/actions/runs/43493143798) | **success**: quality, e2e, postgres-integration      |
 
-PR #1: <https://github.com/a40-sorokin/Russian_Lang/pull/1> — закрыт без merge, ветка `test/ci-negative` сохранена как свидетельство fail/pass.
+PR #1: <https://github.com/soulful31/Russian_Lang/pull/1> — закрыт без merge, ветка `test/ci-negative` сохранена как свидетельство fail/pass.
 
 ## W11-01 … W11-10
 
