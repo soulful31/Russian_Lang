@@ -93,3 +93,5 @@ PR #1: <https://github.com/soulful31/Russian_Lang/pull/1> — закрыт бе�
 ## Результат
 
 `W0-11_PARTIAL`: PR/CI/fail-pass/шаблон/минимальные permissions и **защита обеих веток** подтверждены фактически; остаются W0-02…W0-10 (integration) и явная приёмка владельца. `WAVE0_ACCEPTED`, DEMO и PROD не объявляются.
+
+Проверка обязательного review: PR с одним коммитом документации для подтверждения gate (required approvals = 1).
