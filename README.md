@@ -24,7 +24,7 @@ RL — веб-сервис для тренировки орфографии и �
 ## Запуск (Bash)
 
 ```bash
-git clone https://github.com/a40-sorokin/Russian_Lang.git
+git clone https://github.com/soulful31/Russian_Lang.git
 cd Russian_Lang
 npm ci
 npm run dev
@@ -35,7 +35,7 @@ npm run dev
 ### Windows PowerShell
 
 ```powershell
-git clone https://github.com/a40-sorokin/Russian_Lang.git
+git clone https://github.com/soulful31/Russian_Lang.git
 Set-Location Russian_Lang
 npm ci
 npm run dev

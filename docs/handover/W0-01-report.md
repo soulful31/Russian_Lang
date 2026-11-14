@@ -3,7 +3,7 @@
 **Статус:** W0-01_READY (каркас), не `WAVE0_ACCEPTED`
 **Дата / ОС:** 13.11.2026 / Ubuntu 26.04.1 LTS
 **Ветка / SHA:** `feature/w0-01-bootstrap`; W0-01: `94e91c9196515e92afff499ae1e3f0704b33b8b5`, lockfile-fix: `5200691a4d6ef63536f857cc45b777b2b1eeb2e6`
-**Git remote:** `https://github.com/a40-sorokin/Russian_Lang.git` (private); remote существовал до задачи
+**Git remote:** `https://github.com/soulful31/Russian_Lang.git` (private); remote существовал до задачи
 **Node / npm:** 24.9.0 / 11.6.0
 **Next / React / TypeScript / Tailwind / Vitest / Playwright:** 16.4.6 / 19.3.1 / 5.9.3 / 4.3.3 / 5.0.5 / 1.64.1
 
